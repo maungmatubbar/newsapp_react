@@ -15,7 +15,7 @@ export class News extends Component {
       
   }
   async componentDidMount(){
-    let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=2a741f830f404a0aad1c07f17710076d&page=1&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=c03717bd088a4649bc61ad82e4518375&page=1&pageSize=${this.props.pageSize}`;
     this.setState({loading:true})
     let data = await fetch(url)
     let parseData = await data.json()
@@ -27,7 +27,7 @@ export class News extends Component {
     })
   }
   handlePrevClick = async () =>{
-    let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=2a741f830f404a0aad1c07f17710076d&page=${this.state.page - 1 }&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=c03717bd088a4649bc61ad82e4518375&page=${this.state.page - 1 }&pageSize=${this.props.pageSize}`;
     this.setState({loading:true})
     let data = await fetch(url)
     let parseData = await data.json()
@@ -40,7 +40,7 @@ export class News extends Component {
   }
   handleNextClick = async () =>{
     //if(this.state.page+1 > Math.ceil(this.state.totalResults/20)){}else{}
-    let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=2a741f830f404a0aad1c07f17710076d&page=${this.state.page + 1 }&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=c03717bd088a4649bc61ad82e4518375&page=${this.state.page + 1 }&pageSize=${this.props.pageSize}`;
     this.setState({loading:true})
     let data = await fetch(url)
     let parseData = await data.json()
