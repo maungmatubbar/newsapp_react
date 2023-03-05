@@ -139,6 +139,7 @@ const News = (props) => {
   useEffect(() => {
     document.title = capitalize(props.category);
     updateNews();
+    // eslint-disable-next-line
   }, []);
   // async componentDidMount() {
   //   this.updateNews();
@@ -165,7 +166,7 @@ const News = (props) => {
   };
   return (
     <>
-      <h1 className="text-center">Top {capitalize(props.category)} Headline</h1>
+      <h1 className="text-center mt-5 pt-5">Top {capitalize(props.category)} Headline</h1>
       {loading && <Spinner />}
       <InfiniteScroll
         dataLength={articles.length}

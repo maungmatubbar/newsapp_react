@@ -33,7 +33,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+      <nav className="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             NewsMonkey
