@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import spinner from './spinner.gif'
-export class Spinner extends Component {
+//import React, { Component } from "react";
+import React from "react";
+import spinner from "./spinner.gif";
+/*export class Spinner extends Component {
   render() {
     return (
       <div className='text-center'>
@@ -9,5 +10,12 @@ export class Spinner extends Component {
     )
   }
 }
-
-export default Spinner
+*/
+const Spinner = () => {
+  return (
+    <div className="text-center">
+      <img src={spinner} alt="spinner" />
+    </div>
+  );
+};
+export default Spinner;
